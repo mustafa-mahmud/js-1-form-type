@@ -2,6 +2,8 @@ const input = document.querySelector('input');
 const demo = document.querySelector('p.demo i');
 const container = document.querySelector('.container');
 
+let index = 1;
+
 function demoText(e) {
   demo.textContent = input.value;
 
@@ -12,7 +14,7 @@ function createDisplay() {
   const div = document.createElement('div');
   div.classList.add('content');
   div.innerHTML = `
-	<span>1</span>
+	<span>${index}</span>
 	<p>${input.value}</p>
 	`;
 
@@ -21,6 +23,7 @@ function createDisplay() {
   input.value = '';
   input.focus();
   demo.textContent = '';
+  index++;
 }
 
 input.addEventListener('keyup', demoText);

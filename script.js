@@ -8,8 +8,6 @@ function demoText(e) {
   demo.textContent = input.value;
 
   if (e.key === 'Enter') createDisplay();
-
-  console.log(123);
 }
 
 function createDisplay() {

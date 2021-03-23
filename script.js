@@ -7,7 +7,7 @@ let index = 1;
 function demoText(e) {
   demo.textContent = input.value;
 
-  if (e.key === 'Enter') createDisplay();
+  if (e.key === 'Enter' && input.value.trim() !== '') createDisplay();
 }
 
 function createDisplay() {
